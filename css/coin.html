@@ -1,0 +1,72 @@
+<html>
+<style>
+    @-webkit-keyframes myfirst
+    /* Safari 和 Chrome */
+
+    {
+        from {
+            -webkit-transform: rotateY(0deg);
+        }
+        to {
+            -webkit-transform: rotateY(360deg);
+        }
+    }
+
+    .coin {
+        animation: myfirst 5s;
+        -moz-animation: myfirst 5s;
+        /* Firefox */
+        -webkit-animation: myfirst 2s linear infinite alternate;
+        ;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -50px;
+        height: 100px;
+        width: 100px;
+        border: 1px solid red;
+        border-radius: 50%
+    }
+
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        background-color: #f37cae;
+        border: 1px solid #ee4e91;
+        border-radius: 100%;
+        animation: rotate 1s linear infinite;
+    }
+
+    @keyframes rotate {
+        0% {
+            width: 100px;
+        }
+        25% {
+            width: 51px;
+        }
+        50% {
+            width: 2px;
+        }
+        75% {
+            width: 51px;
+        }
+        100% {
+            width: 100px;
+        }
+    }
+
+    .center {
+        margin: 10px auto;
+    }
+</style>
+
+<body style="position:relative;">
+    <div class="coin" style="">
+
+    </div>
+    <div class="circle center"></div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!-- 巧用margin/padding的百分比实现高度自适应 -->
+<html>
+    <head>
+        <style>
+            .outer{
+                position: relative;
+                width:50%;
+               /*  background-color: red; */
+            }
+            .outer:after{
+                content:"";
+                display: block;
+                padding-top:100%;
+            }
+            img{
+                position: absolute;
+                top: 0;
+                width:100%;
+            }
+        </style>
+    </head>
+    <div style="width:50%;border:1px solid red" class="outer"> 
+        <img src="http://img.arrayhuang.cn/product/miya-1060079/multiple/0.jpg@1e_415w_415h_1c_0i_1o_1x.jpg" alt="" />
+    </div>
+</html>
