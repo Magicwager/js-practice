@@ -1,14 +1,3 @@
-/* 数组解构赋值 */
-
-//模式匹配赋值
-//let [a,[b],[c]] = [1,[2,2],3]//错误，左右模式不匹配：c不匹配
-let [a,[b],[c]] = [1,[2,2],[3]]
-console.log(a,b,c)//1 2 3
-let [d,...e] = [1,2,3,4]
-console.log(d,e)//1 [2,3,4]
-
-
-
 /* 对象解构赋值 */
 //是按照属性名去匹配赋值，与数组不一样，不按顺序
 let {bar,foo} = {foo:"hello",bar:"world"}
@@ -46,5 +35,3 @@ function add([x, y]){
 console.log( add([1, 2]) ); // 3
 
 [[1,2],[3,4]].map(([a,b])=>console.log(a+b))
-
-
