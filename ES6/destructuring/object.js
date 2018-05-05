@@ -28,6 +28,10 @@ console.log(k,g,h,i)//1 4 5 null
 let {m="hello",n="你好",o} = {m:undefined,n:null,o:"good"}
 console.log(m,n,o)//"hello" null "good"
 
+//对象的解构赋值，可以很方便地将现有对象的方法，赋值到某个变量
+let {log,cos,sin}=Math;
+console.log(log,cos,sin)
+
 /* 函数参数 */
 function add([x, y]){
     return x + y;
