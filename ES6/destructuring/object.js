@@ -32,10 +32,3 @@ console.log(m,n,o)//"hello" null "good"
 let {log,cos,sin}=Math;
 console.log(log,cos,sin)
 
-/* 函数参数 */
-function add([x, y]){
-    return x + y;
-  }
-console.log( add([1, 2]) ); // 3
-
-[[1,2],[3,4]].map(([a,b])=>console.log(a+b))
