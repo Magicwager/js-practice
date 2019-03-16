@@ -12,7 +12,32 @@ function fun2() {
     })
   }
 
-new Promise.all([fun1(),fun2()]).then(data=>{
+  //import Promise from './promise_.js'
+/* new Promise.all([fun1(),fun2()]).then(data=>{
   
+  }) */
+  let Promise = require ('./promise_.js')
+
+  let p1 = new Promise((resolve,reject)=>{
+     /*  setTimeout(()=>{
+        let num = Math.random();
+        if(num>.5){
+            resolve("success");
+        }else{
+            reject("faild");
+        }
+      },1000) */
+      let num = Math.random();
+      if(num>.5){
+          resolve("success");
+      }else{
+          reject("faild");
+      }
+     
   })
-  
+
+  p1.then((value)=>{
+    console.log(value)
+  },(reason)=>{
+    console.log(reason)
+  })

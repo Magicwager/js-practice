@@ -5,3 +5,13 @@ console.log(a,b,c,d,e,f)
 //还可以对字符串的属性进行结构解析
 let {length:len}='hello';
 console.log(len)
+
+const name = "伍建",rank = "S";
+let desc = "${name}今年绩效获得${rank}"
+function replace(str){
+   return  str.replace(/\$\{\([^}]+)\}/g,function(matched,key){
+        console.log(matched,key)
+        return eval(key)
+    })
+}
+console.log(replace(desc))

@@ -36,4 +36,14 @@ console.log(removeObject+",arr3:"+arr3)
 /* push(n1,n2,n3,....nx)向数组末尾添加一个或多个元素，并返回添加后数组的长度*/
 /* unshift(n1,n2,n3,....nx)向数组头添加一个或多个元素，并返回添加后数组的长度， */
 
+/* reduce求和 
+其中第一个参数是一个函数（必须）,执行数组的每个元素
+函数里头的参数第一个第二个必填
+第二个参数是初始值，选填
+*/
 
+let arr5 = [1,2,3,4];
+function f(total,currentValue, currentIndex, arr){
+  return total+currentValue;
+}
+console.log(arr5.reduce(f,2))

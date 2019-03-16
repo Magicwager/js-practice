@@ -21,3 +21,4 @@ function fun(){
     console.log("this is fun")
 }
 let[y=fun()]=[1]//不执行fun
+
