@@ -58,6 +58,8 @@ function Promise(task){
 Promise.prototype.then = function(onFulfilledCallBack,onRejectedCallBack){
     //将this缓存起来，that为Promise实例
     let that = this;
+    //这里支持同步跟异步，如果需要异步执行的，那就是在pendding状态，先把需要处理的先存起来
+    //如果是同步执行，直接是完成或失败状态，直接执行他们的回调
     switch(that.status){
         case "pendding":
         that.fulfilledCallBackList.push(onFulfilledCallBack);
