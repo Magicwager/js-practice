@@ -1,10 +1,12 @@
+//函数默认参数，替换let height = height || 50;这种写法
 function foo({x,y=1}){
  console.log(x+y)
 }
-foo({});
-foo({x:1})
-foo({x:2,y:3})
-//foo()//报错
+foo({});//NaN
+foo({x:1})//2
+foo({x:2,y:3})//5
+foo()//报错
+
 
 
 function foo({x,y=1}={}){

@@ -15,3 +15,11 @@ function dereplicate(array) {
 }
 var a=[1,13,24,11,11,14,1,2];
 console.log(dereplicate(a))
+
+
+/**
+ * 利用ES6
+ */
+let set = new Set(a);
+let newArray = [...set];
+console.log(newArray)
