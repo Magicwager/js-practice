@@ -1,15 +1,15 @@
 var name = "The Window";
-window.name="wujiank"
+//window.name="wujiank"
 
 　　var object = {
-　　　　name : "My Object",
+    　　　　name: "My Object",
 
-　　　　getNameFunc : function(){
-　　　　　　return function(){
-　　　　　　　　return this.name;
-　　　　　　};
+    　　　　getNameFunc: function () {
+        　　　　　　return function () {
+            　　　　　　　　return this.name;
+        　　　　　　};
 
-　　　　}
+    　　　　}
 
 　　};
 

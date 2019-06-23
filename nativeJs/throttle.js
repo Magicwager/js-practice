@@ -24,6 +24,7 @@
         if (!timeout) {
             timeout = setTimeout(() => {
                 clearTimeout(timeout)//注意清掉定时器
+                timeout = null;
                 operateFunc.apply(context, args)
             }, interval)
         }
