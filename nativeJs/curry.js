@@ -4,7 +4,7 @@
  * add(1, 2, 3)(4)()
  */
 
-/* function curryAdd() {
+function curryAdd() {
     // 第一次执行时，定义一个数组专门用来存储所有的参数
     let _args = [].slice.call(arguments);
 
@@ -32,12 +32,12 @@
 
 console.log(curryAdd(1)(2)(3))
 console.log(curryAdd(1, 2, 3)(4)()) 
-console.log(curryAdd(1)(2)) */
+console.log(curryAdd(1)(2))
 
 /**
  * 函数隐式转换，如果一个函数参与计算，则默认会调用函数的toString方法转为字符串进行计算，而如果重新定义toString方法，或定义valueOf的方法，
  */
- let fn = function(){
+/*  let fn = function(){
      let arg = [...arguments];
      let a = function(){
          arg.push([...arguments])
@@ -50,7 +50,7 @@ console.log(curryAdd(1)(2)) */
      }
      return a;
  }
- console.log(fn(1)(2)(3))
+ console.log(fn(1)(2)(3)) */
 
 
 

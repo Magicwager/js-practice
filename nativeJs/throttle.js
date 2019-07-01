@@ -17,20 +17,28 @@
   */
   
  function throttle(operateFunc,interval){
-    let timeout;
-    return () => {
+    var timeout;
+    return function(){
         let context = this;
         let args = arguments;
-        if (!timeout) {
+        console.log(timeout)
+        if (!timeout) { 
             timeout = setTimeout(() => {
                 clearTimeout(timeout)//注意清掉定时器
-                timeout = null;
                 operateFunc.apply(context, args)
             }, interval)
+            console.log(timeout)
         }
 
     }
  }
+
+ let operateFunc =function(){
+    console.log(1)
+ }
+ setInterval(function(){
+    throttle(operateFunc,10000)
+ },1000) 
 
  //时间戳版本
  /**
@@ -42,7 +50,7 @@
    * @param {any} operateFunc 操作函数
    * @param {any} interval 节流时间间隔
    */
-  function throttle(operateFunc,interval){
+/*   function throttle(operateFunc,interval){
     let preTime = 0;
     return ()=>{
         let now = Date.now();
@@ -51,4 +59,4 @@
             preTime = now;
         }
     }
-  }
+  } */
