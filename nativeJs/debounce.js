@@ -32,14 +32,14 @@
     }
  }
 
-  /**
+ /**
   * 立即执行版本
   * 触发事件后函数会立即执行，然后 n 秒内不触发事件才能继续执行函数的效果。
   * 
-  * @param {any} operateFunc 
-  * @param {any} interval 
+  * @param {回调函数} operateFunc 
+  * @param {防抖时间间隔} interval 
   */
-  function debounce(operateFunc,interval){
+export const debounce=(operateFunc,interval)=>{
     let timer;
     return ()=>{
         let context = this;
@@ -50,10 +50,9 @@
         timer = null;
       } 
       timer = setTimeout(() => {
-        timeout = null;
-      },wait)
-      
-      if(callNow) func.apply(context,args)
+        timer = null;
+      },interval)
+      if(callNow) operateFunc.apply(context,args)
      }
 }
 
